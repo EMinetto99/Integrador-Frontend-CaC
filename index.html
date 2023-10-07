@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/logo-CAC.png" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/65bb99c3d5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Conf Bs. As.</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="./assets/img/codoacodo.png" alt="Logo Codo a Codo">
+      <h2>Conf Bs As</h2>
+    </div>
+    <nav>
+      <a href="#conferencia">La conferencia</a>
+      <a href="#oradores">Los oradores</a>
+      <a href="#lugar">El lugar y la fecha</a>
+      <a href="#ser-orador">Conviértete en orador</a>
+      <a class="ticket" id="verde" href="./pages/tickets.html">Comprar tickets</a>
+    </nav>
+    <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+  </header>
+
+  <main>
+    <div class="banner" id="conferencia">
+      <img src="./assets/img/ba1.jpg" alt="Fondo" class="background-image">
+      <div class="banner-text">
+        <h1>Conf Bs As</h1>
+        <p>
+          Conf Bs As llega por primera a Argentina. Un evento para compartir
+          con nuestra comunidad el conocimiento y esperiencia de los expertos
+          que están creando el futuro de Internet. Ven a conocer a miembros
+          del evento, a otros estudiantes de Codo a Codo y a los oradores de
+          primer nivel que tenemos para ti. Te esperamos!
+        </p>
+        <div class="btn-banner">
+          <a href="#conviertete" id="btn-orador">Quiero ser orador</a>
+          <a href="./pages/tickets.html" class="btn-comprar">Comprar tickets!</a>
+        </div>
+      </div>
+    </div>
+    <section id="oradores">
+      <div class="title">
+        <h4>Conoce a los</h4>
+        <h2>Oradores</h2>
+      </div>
+
+      <div class="container-cards">
+        <div class="card">
+          <img src="./assets/img/steve.jpg" alt="orador">
+
+          <div class="text-card">
+            <div class="btn-card">
+              <a href="#" class="javascript link-card">JavaScript</a>
+              <a href="#" class="react link-card">React</a>
+            </div>
+            <h3>Steve Jobs</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              numquam culpa consequuntur sunt doloribus itaque est quod optio
+              soluta. Quos!
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./assets/img/bill.jpg" alt="orador">
+
+          <div class="text-card">
+            <div class="btn-card">
+              <a href="#" class="javascript link-card">JavaScript</a>
+              <a href="#" class="react link-card">React</a>
+            </div>
+            <h3>Bill Gates</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              numquam culpa consequuntur sunt doloribus itaque est quod optio
+              soluta. Quos!
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="./assets/img/ada.jpeg" alt="orador">
+
+          <div class="text-card">
+            <div class="btn-card">
+              <a href="#" class="negocios link-card">Negocios</a>
+              <a href="#" class="startups link-card">Startups</a>
+            </div>
+            <h3>Ada Lovelace</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              numquam culpa consequuntur sunt doloribus itaque est quod optio
+              soluta. Quos!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lugar">
+      <img src="./assets/img/honolulu.jpg" alt="Lugar y Fecha">
+      <div class="text-right">
+        <h2>Bs As - Octubre</h2>
+        <p>
+          Buenos Aires es la provincia y localidad más grande del estado de
+          Argentina, en los Estados Unidos. Honolulu es la más sureña de entre
+          las principales ciudades estadounidenses. Aunque el nombre de
+          Honolulu se refiere al área urbana en la costa sureste de la isla de
+          Oahu, la ciudad y el condado de Honolulu han formado una
+          ciudad-condado consolidada que cubre toda la ciudad (aproximadamente
+          600km² de superficie).
+        </p>
+        <a href="#" id="btn-card2">Conocé más</a>
+      </div>
+    </section>
+
+    <section id="ser-orador">
+      <div class="title">
+        <h4>Conviértete en un</h4>
+        <h2>Orador</h2>
+      </div>
+
+      <div class="form-oradores">
+        <p class="subt-form">
+          Anótate como orador para dar una charla. Cuéntanos de qué quieres
+          hablar!
+        </p>
+        <form>
+          <input type="text" id="fname" name="fname" placeholder="Nombre" required>
+          <input type="text" id="lname" name="lname" placeholder="Apellido" required>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Sobre qué quieres hablar?"></textarea>
+          <p class="text-form">Recuerda incluir un título para tu charla</p>
+          <input type="submit" value="Enviar" id="submit">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="item-footer" href="#">Preguntas frecuentas</a>
+    <a class="item-footer" href="#">Contáctanos</a>
+    <a class="item-footer" href="#">Prensa</a>
+    <a class="item-footer" href="#">Conferencias</a>
+    <a class="item-footer" href="#">Términos y condiciones</a>
+    <a class="item-footer" href="#">Privacidad</a>
+    <a class="item-footer" href="#">Estudiantes</a>
+  </footer>
+</body>
+
+</html>
