@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../assets/img/logo-CAC.png" type="image/x-icon">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <!--    NO MORE USED
+        <script src="https://kit.fontawesome.com/65bb99c3d5.js" crossorigin="anonymous"></script>
+        -->
+        <link rel="stylesheet" href="../css/style_tickets.css">
+        <title>Conf Bs. As.</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="../assets/img/codoacodo.png" alt="Logo Codo a Codo">
+                <h2>Conf Bs As</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../index.html#conferencia">La conferencia</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#oradores">Los oradores</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#lugar">El lugar y la fecha</a>
+                    </li>
+                    <li>
+                        <a href="../index.html#ser-orador">Conviértete en orador</a>
+                    </li>
+                    <li>
+                        <a class="ticket" id="verde" href="#comprar-tickets">Comprar tickets</a>
+                    </li>
+                </ul>
+            </nav>
+            <i class="fa-solid fa-bars" style="color: #ffffff"></i>
+        </header>
+
+        <main>
+            <section class="compraDeTickets">
+                <div class="container-tarjetasCategoria">
+                    <div class="tarjeta tarjeta-1">
+                        <h2>Estudiante</h2>
+                        <h3>Tienen un descuento</h3>
+                        <h3 class="porcentaje">80%</h3>
+                        <h4>* presentar documentación</h4>
+                    </div>
+                    <div class="tarjeta tarjeta-2">
+                        <h2>Trainee</h2>
+                        <h3>Tienen un descuento</h3>
+                        <h3 class="porcentaje">50%</h3>
+                        <h4>* presentar documentación</h4>
+                    </div>
+                    <div class="tarjeta tarjeta-3">
+                        <h2>Junior</h2>
+                        <h3>Tienen un descuento</h3>
+                        <h3 class="porcentaje">15%</h3>
+                        <h4>* presentar documentación</h4>
+                    </div>
+                </div>
+
+                <div class="seccion-formulario">
+                    <div id="comprar-tickets" class="container-formulario">
+                        <div class="titleFormulario">
+                            <h3>VENTA</h3>
+                            <h1>VALOR DE TICKET $200</h1>
+                        </div>
+
+                        <form>
+                            <div class="container-nombreApellido">
+                                <input class="estilo-formulario" type="text" id="nombre" name="nombre" placeholder="Nombre">
+                                <input class="estilo-formulario" type="text" id="apellido" name="apellido" placeholder="Apellido">
+                            </div>
+                            <input class="estilo-formulario" type="email" id="correo"name="correo" placeholder="Correo">
+
+                            <div class="container-cantidadCategoria">
+                                <div class="caja-cantidad">
+                                    <h2>Cantidad</h2>
+                                    <input class="estilo-formulario" type="number" id="numero" name="numero" placeholder="cantidad">
+                                </div>
+                                <div class="caja-categoria">
+                                    <h2>Categoría</h2>
+                                    <select class="estilo-formulario">
+                                        <option selected disabled>Elija una categoría</option>
+                                        <option>Estudiante</option>
+                                        <option>Trainee</option>
+                                        <option>Junior</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <p class="importe-de-Precio">Total a pagar: $</p>
+
+                            <div class="container-botones">
+                                <button class="estilo-boton">Borrar</button><button class="estilo-boton">Resumen</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <a class="item-footer text-decoration-none" href="#">Preguntas frecuentas</a>
+            <a class="item-footer" href="#">Contáctanos</a>
+            <a class="item-footer" href="#">Prensa</a>
+            <a class="item-footer" href="#">Conferencias</a>
+            <a class="item-footer" href="#">Términos y condiciones</a>
+            <a class="item-footer" href="#">Privacidad</a>
+            <a class="item-footer" href="#">Estudiantes</a>
+        </footer>
+
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

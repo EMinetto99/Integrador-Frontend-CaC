@@ -1,17 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto+Mono:wght@200;300;400;500;600&display=swap');
 
 :root {
-    --bgcolor: #353a40;
-    --textcolor: #f9f9f9ed;
-    --btn: #29a744;
-    --bgfooter: #1d506d;
-    --link-inactive: #949c9b;
-    --js: #fec007;
-    --react: #1a9cb0;
-    --negocios: #6d757d;
-    --startups: #dc3546;
-    --text-grey: #808080;
-  }
+  --bgcolor: #353a40;
+  --textcolor: #f9f9f9ed;
+  --white: #ffffff;
+  --form-border: rgb(211 211 211);
+  --btn-sucess: #29a744;
+  --btn-olive: #96c93d;
+  --btn-border: #9ebc64;
+  --bgfooter: #1d506d;
+  --bgprecio: #cbe5fe;
+  --textcolor-precio: #113b6d;
+  --precio-border: #c5d8e9;
+  --link-inactive: #949c9b;
+  --js: #fec007;
+  --react: #1a9cb0;
+  --negocios: #6d757d;
+  --startups: #dc3546;
+  --text-grey: #808080;
+}
   
   * {
     box-sizing: border-box;
@@ -21,7 +28,6 @@
     font-family: 'Poppins', sans-serif;
   }
   
-  /* ------------------------------ HEADER - NAV ------------------------------ */
   header {
     background-color: var(--bgcolor);
     height: 4rem;
@@ -33,39 +39,51 @@
     position: sticky;
     top: 0px;
     z-index: 1;
-  }
+    font-family: 'Poppins', sans-serif;
+}
   
-  .logo h2 {
-    font-size: 16px;
-  }
+.logo h2 {
+    font-size: 1rem;
+    margin: 0;
+}
   
-  .logo img {
+.logo img {
     width: 6rem;
-  }
-  
-  .logo {
+}
+
+.logo {
     display: flex;
     align-items: center;
-  }
-  
-  nav a {
-    color: var(--link-inactive);
+}
+
+nav ul{
+    margin-bottom: 0;
+    padding-left: 0;
+}
+nav ul li{
+    display: inline-block;
     margin-right: 0.5rem;
-  }
+}
+
+nav a {
+    display: inline-block;
+    color: var(--link-inactive);
+    text-decoration: none;
+}
   
-  nav a:active,
-  nav a:hover {
+nav a:active,
+nav a:hover {
     color: var(--textcolor);
-    font-weight: bolder;
-  }
+    transition: 0.3s;
+}
   
-  #verde {
-    color: var(--btn);
-  }
+#verde {
+    color: var(--btn-sucess);
+}
   
-  .fa-bars {
+.fa-bars {
     display: none;
-  }
+}
   
   /* ------------------------- BANNER - LA CONFERENCIA ------------------------ */
   .banner {
@@ -305,7 +323,7 @@
   
   input,
   textarea {
-    border: 1px dotted var(--text-grey);
+    border: 1px solid var(--text-grey);
     color: var(--text-grey);
   }
   
@@ -313,7 +331,7 @@
     width: 100%;
     margin-bottom: 0.5rem;
     height: 2rem;
-    border: 1px dotted var(--link-inactive);
+    border: 1px solid var(--link-inactive);
     padding: 0.5rem;
     color: var(--bgcolor);
     font-size: 12px;
@@ -358,17 +376,19 @@
     padding: 1rem;
     display: flex;
     justify-content: center;
-    background-color: var(--bgfooter);
+    background-image: linear-gradient(to right, #1d3744, #1d3e4f, #1d455a, #1d4c66, #1e5372);
     flex-wrap: wrap;
-  }
-  
-  .item-footer {
+    font-family: 'Poppins', sans-serif;
+}
+
+.item-footer {
     color: var(--textcolor);
     font-size: 12px;
     text-align: center;
     margin: 0.5rem 1rem;
+    text-decoration: none;
     width: 5rem;
-  }
+}
   
   /* ------------------------------ MEDIA QUERIES ----------------------------- */
   @media (max-width: 576px) {
