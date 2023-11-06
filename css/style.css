@@ -8,6 +8,7 @@
   --btn-sucess: #29a744;
   --btn-olive: #96c93d;
   --btn-border: #9ebc64;
+  --btn-conferencia: #d7d7d7;
   --bgfooter: #1d506d;
   --bgprecio: #cbe5fe;
   --textcolor-precio: #113b6d;
@@ -20,28 +21,21 @@
   --text-grey: #808080;
 }
   
-  * {
-    box-sizing: border-box;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  header {
-    background-color: var(--bgcolor);
-    height: 4rem;
-    color: var(--textcolor);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-    font-family: 'Poppins', sans-serif;
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
-  
+
+/* ------------------------------ HEADER - NAV ------------------------------ */
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+}
+
 .logo h2 {
     font-size: 1rem;
     margin: 0;
@@ -56,33 +50,33 @@
     align-items: center;
 }
 
-nav ul{
-    margin-bottom: 0;
-    padding-left: 0;
-}
-nav ul li{
-    display: inline-block;
-    margin-right: 0.5rem;
+.nav-atributos{
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
 }
 
-nav a {
-    display: inline-block;
+.boton-nav {
     color: var(--link-inactive);
-    text-decoration: none;
 }
   
-nav a:active,
-nav a:hover {
+.boton-nav:active,
+.boton-nav:hover {
     color: var(--textcolor);
     transition: 0.3s;
 }
-  
-#verde {
+
+.btn-conferencia {
+  color: var(--btn-conferencia);
+}
+.btn-conferencia:hover {
+  color: var(--white);
+}
+
+.btn-ticket {
     color: var(--btn-sucess);
 }
-  
-.fa-bars {
-    display: none;
+.btn-ticket:hover {
+    color: #5bd976;
 }
   
   /* ------------------------- BANNER - LA CONFERENCIA ------------------------ */
@@ -94,7 +88,7 @@ nav a:hover {
     justify-content: flex-end;
     align-items: center;
     width: 100%;
-    height: auto;
+    height: 89vh;
   }
   
   .background-image {
@@ -108,16 +102,16 @@ nav a:hover {
     height: 100%;
     object-fit: cover;
   }
-  
+
   .banner-text {
-    width: 40%;
-    padding: 25% 5% 10% 0%;
+    width: 45%;
+    padding: 13% 5% 6% 0%;
     line-height: 1.2rem;
     display: flex;
     flex-direction: column;
     font-size: 14px;
   }
-  
+
   .banner-text h1 {
     font-size: 24px;
     font-weight: bold;
@@ -126,42 +120,45 @@ nav a:hover {
   
   .banner-text p {
     margin-bottom: 1.5rem;
-    text-align: justify;
+    text-align: right;
   }
-  
-  .banner-text a {
-    color: var(--textcolor);
-    border-radius: 0.2rem;
-    padding: 0.5rem;
-    text-align: center;
-    margin-bottom: 15px;
-    width: 8rem;
-  }
-  
-  #btn-orador {
-    border: 1px var(--textcolor) solid;
-  }
-  
-  #btn-orador:hover {
-    border-color: var(--btn);
-    color: var(--btn);
-  }
-  
-  .btn-comprar {
-    border: 1px var(--btn) solid;
-    background-color: var(--btn);
-    margin-left: 1.5rem;
-  }
-  
-  .btn-comprar:hover {
-    background-color: transparent;
-    color: var(--btn);
-  }
-  
-  .btn-banner {
+
+  .container-btn-banner {
     display: flex;
     flex-wrap: wrap;
     justify-content: end;
+    gap: 5%;
+  }
+
+  .container-btn-banner a {
+    color: var(--textcolor);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    padding: 0.5rem;
+    margin-bottom: 15px;
+    border-radius: 0.3rem;
+    transition: 0.3s;
+  }
+  
+  .btn-orador {
+    border: 2px rgba(255, 255, 255, 0.35) solid;
+  }
+  
+  .btn-orador:hover {
+    border-color: var(--btn-conferencia);
+    color: var(--white);
+  }
+  
+  .btn-comprar {
+    background-color: var(--btn-sucess);
+  }
+  
+  .btn-comprar:hover {
+    background-color: #258139;
+    color: var(--white);
   }
   
   .title {
@@ -173,12 +170,12 @@ nav a:hover {
   }
   
   .title h4 {
-    font-size: 0.5rem;
+    font-size: 1rem;
     color: var(--text-grey);
   }
   
   .title h2 {
-    font-size: 1.1rem;
+    font-size: 2rem;
     font-weight: bold;
   }
   
@@ -199,15 +196,15 @@ nav a:hover {
   
   .card {
     width: 14rem;
-    border: 1px solid var(--link-inactive);
+    border: 1px solid var(--form-border);
     display: flex;
     flex-direction: column;
     margin: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 5px;
+    overflow: hidden;
   }
   
   .card img {
-    border-radius: 0.5rem 0.5rem 0 0;
     height: 60%;
   }
   
@@ -216,15 +213,12 @@ nav a:hover {
   }
   
   .link-card {
-    font-size: 0.6rem;
+    display: inline-block;
+    font-size: 0.7rem;
     border-radius: 0.2rem;
     padding: 4px;
     color: var(--textcolor);
     font-weight: bold;
-  }
-  
-  .link-card:hover {
-    cursor: pointer;
   }
   
   .text-card h3 {
@@ -237,19 +231,28 @@ nav a:hover {
     background-color: var(--js);
     color: #000000;
   }
-  
   .react {
     background-color: var(--react);
   }
-  
+  .swift{
+    background-color: #e84e36;
+  }
+  .csharp {
+    background-color: #67217a;
+  }
+  .assembly {
+    background-color: #000000;
+  }
+  .sistemas-operativos{
+    background-color: #113b6d;
+  }
   .negocios {
     background-color: var(--negocios);
   }
-  
   .startups {
     background-color: var(--startups);
   }
-  
+
   .text-card p {
     font-size: 12px;
     line-height: 1.2rem;
@@ -312,13 +315,13 @@ nav a:hover {
   }
   
   .text-form {
-    font-size: 10px;
+    font-size: 1rem;
   }
   
   .form-oradores {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
   }
   
   input,
@@ -351,20 +354,19 @@ nav a:hover {
   #submit {
     width: 100%;
     height: 2.2rem;
-    border: 1px solid var(--btn);
+    border: 1px solid var(--btn-border);
+    border-radius: 5px;
     color: var(--textcolor);
     font-size: 12px;
-    background-color: var(--btn);
+    background-color: var(--btn-olive);
     cursor: pointer;
     text-transform: uppercase;
   }
   
   #submit:hover {
-    background-color: transparent;
-    color: var(--btn);
-    font-weight: bold;
-    border: 2px solid var(--btn);
-    letter-spacing: 2px;
+    background-color: #789f33;
+    color: var(--textcolor);
+    transition: 0.3s;
   }
   
   #fname {
@@ -413,21 +415,10 @@ nav a:hover {
     .form-oradores {
       width: 60%;
     }
-  
-    nav {
-      display: none;
-    }
-  
-    .fa-bars {
-      display: block;
-    }
   }
   
   @media (min-width: 577px) and (max-width: 768px) {
-    nav {
-      display: none;
-    }
-  
+
     .banner-text {
       width: 60%;
     }
@@ -448,16 +439,10 @@ nav a:hover {
     .form-oradores {
       width: 50%;
     }
-  
-    .fa-bars {
-      display: block;
-    }
+
   }
   
   @media (min-width: 769px) and (max-width: 992px) {
-    nav {
-      font-size: 12px;
-    }
     .banner-text {
       font-size: 14px;
       width: 50%;

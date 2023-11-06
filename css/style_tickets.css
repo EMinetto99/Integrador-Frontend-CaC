@@ -9,6 +9,7 @@
     --btn-sucess: #29a744;
     --btn-olive: #96c93d;
     --btn-border: #9ebc64;
+    --btn-conferencia: #d7d7d7;
     --bgfooter: #1d506d;
     --bgprecio: #cbe5fe;
     --textcolor-precio: #113b6d;
@@ -30,13 +31,6 @@
 
 /* ------------------------------ HEADER - NAV ------------------------------ */
 header {
-    background-color: var(--bgcolor);
-    height: 4rem;
-    color: var(--textcolor);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
     position: sticky;
     top: 0px;
     z-index: 1;
@@ -57,33 +51,33 @@ header {
     align-items: center;
 }
 
-nav ul{
-    margin-bottom: 0;
-    padding-left: 0;
-}
-nav ul li{
-    display: inline-block;
-    margin-right: 0.5rem;
+.nav-atributos{
+  background-color: var(--bgcolor);
+  color: var(--textcolor);
 }
 
-nav a {
-    display: inline-block;
+.boton-nav {
     color: var(--link-inactive);
-    text-decoration: none;
 }
   
-nav a:active,
-nav a:hover {
+.boton-nav:active,
+.boton-nav:hover {
     color: var(--textcolor);
     transition: 0.3s;
 }
-  
-#verde {
+
+.btn-conferencia {
+  color: var(--btn-conferencia);
+}
+.btn-conferencia:hover {
+  color: var(--white);
+}
+
+.btn-ticket {
     color: var(--btn-sucess);
 }
-  
-.fa-bars {
-    display: none;
+.btn-ticket:hover {
+    color: #5bd976;
 }
   
 
@@ -149,12 +143,12 @@ main {
     border-color: goldenrod;
 }
 
+/* -------------- FORMULARIO ------------- */
+
 .seccion-formulario{
     background-color: var(--white);
-    height: 76vh;
+    height: 75vh;
 }
-
-/* -------------- FORMULARIO ------------- */
 
 .container-formulario{
     background-color: var(--white);
@@ -253,7 +247,7 @@ form #correo {
     color: var(--white);
     border-radius: 5px;
     border-style: solid;
-    border-color: #9ebc64;
+    border-color: var(--btn-border);
     background-color: var(--btn-olive);
 }
   
@@ -279,74 +273,28 @@ footer {
 
 /* ------------------------------ MEDIA QUERIES ----------------------------- */
 @media (max-width: 576px) {
-    .banner-text {
-      width: 60%;
+    .container-tarjetasCategoria {
+        height: 90vh;
     }
-  
-    .text-right {
-      padding: 1.5rem;
-      text-align: justify;
-    }
-  
-    .text-right p {
-      margin-bottom: 1rem;
-    }
-  
-    #btn-card2 {
-      font-size: 12px;
-      margin-bottom: 5rem;
-    }
-  
-    .form-oradores {
-      width: 60%;
-    }
-  
-    nav {
-      display: none;
-    }
-  
-    .fa-bars {
-      display: block;
+    .tarjeta {
+        height: 39%;
+        width: 85%;
     }
 }
   
 @media (min-width: 577px) and (max-width: 768px) {
-    nav {
-      display: none;
+    .container-tarjetasCategoria {
+        justify-content: space-evenly;
     }
-  
-    .banner-text {
-      width: 60%;
-    }
-  
-    .text-right {
-      padding: 1rem;
-      text-align: justify;
-    }
-  
-    #btn-card2 {
-      font-size: 12px;
-    }
-  
-    .text-right p {
-      margin-bottom: 2rem;
-    }
-  
-    .form-oradores {
-      width: 50%;
-    }
-  
-    .fa-bars {
-      display: block;
+    .tarjeta {
+        height: 65%;
+        width: auto;
     }
 }
   
 @media (min-width: 769px) and (max-width: 992px) {
-    nav {
-      font-size: 12px;
-    }
-    .banner-text {
-      font-size: 14px;
-      width: 50%;
+    .tarjeta {
+      height: 65%;
+      width: auto;
     }
 }
