@@ -84,7 +84,7 @@ header {
 /* -------------------------------------------- MAIN -----------------------------------------*/
 
 main {
-    background-image: url(../assets/img/ba1.jpg);
+    background-image: url(../assets/img/ba1_low_size.jpg);
     background-size: auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -106,6 +106,7 @@ main {
 .tarjeta {
     height: 65%;
     width: 19.7%;
+    min-width: 216px;
     border-radius: 4px;
     border-style: solid;
     border-width: 4px;
@@ -275,9 +276,15 @@ footer {
 @media (max-width: 576px) {
     .container-tarjetasCategoria {
         height: 90vh;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
     .tarjeta {
-        height: 39%;
+        height: auto;
+        width: 85%;
+    }
+
+    .container-formulario {
         width: 85%;
     }
 }
@@ -285,16 +292,24 @@ footer {
 @media (min-width: 577px) and (max-width: 768px) {
     .container-tarjetasCategoria {
         justify-content: space-evenly;
+        flex-wrap: nowrap;
+        gap: 0;
     }
     .tarjeta {
-        height: 65%;
+        height: 50%;
+        min-width: 0;
         width: auto;
+    }
+    .container-formulario {
+        width: 70%;
     }
 }
   
 @media (min-width: 769px) and (max-width: 992px) {
     .tarjeta {
       height: 65%;
-      width: auto;
+    }
+    .container-formulario {
+        width: 70%;
     }
 }
